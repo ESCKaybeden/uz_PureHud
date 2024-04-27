@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    user-select: none;
+    overflow: hidden;
+}
+
+* { transition: .2s all linear; }
+
+
+.UZStore {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 67.5rem;
+    width: 120rem;
+    overflow: hidden;
+}
+
+
+@mixin Street($top, $height) {
+    position: absolute;
+    width: 13rem;
+    height: $height;
+    left: 2.05rem;
+    top: $top;
+    > p {
+        font-family: 'Montserrat';
+        text-align: left;
+        font-style: italic;
+        font-weight: 400;
+        font-size: .938rem;
+        letter-spacing: .1em;
+        color: #FFFFFF;
+        margin-top: -.1rem;
+    }
+    > p[id="2"] {
+        font-size: .5rem;
+        line-height: .813rem;
+        color: #ffffff80;
+    }
+
+}
+
+.UZStore {
+    .Location {
+        position: absolute;
+        width: 17rem;
+        height: 2.438rem;
+        left: 1.75rem;
+        bottom: 16.8rem;
+    }
+    .Street1 { @include Street($top: .85rem, $height:.938rem); }
+    .Street2 { @include Street($top: 1.8rem, $height:.5rem); }
+    .LocationSVG {
+        position: absolute;
+        left: .5rem;
+        bottom: .2rem;
+    }
+}
+
+.UZStore {
+    .Status {
+        position: absolute;
+        width: 19.5rem;
+        height: 2.5rem;
+        left: 1.75rem;
+        bottom: 1.5rem;
+        .Stat {
+            position: relative;
+            width: 2.506rem;
+            height: 2.466rem;
+            margin-left: .625rem;
+            float: left;
+            .Icon {
+                position: absolute;
+                width: 1.5rem;
+                height: 1.5rem;
+                margin: auto auto;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                top: 0;
+            }
+        }
+    }
+}
+
+
+
+
+.UZStore {
+    .PlayerHud {
+        position: absolute;
+        width: 30rem;
+        height: 12rem;
+        right: 0rem;
+        top: 0rem;
+        .Servers {
+            position: absolute;
+            width: 25.625rem;
+            height: 5.25rem;
+            right: 0;
+            top: 2rem;
+            background: linear-gradient(269.86deg, rgba(255, 255, 255, 0.5) 21.46%, rgba(255, 255, 255, 0) 93.27%);
+            .ServerName {
+                position: absolute;
+                height: 100%;
+                width: 12rem;
+                right: 0;
+                top: 0;
+                > p {
+                    text-align: right;
+                    font-family: 'Montserrat';
+                    font-style: italic;
+                    font-weight: 500;
+                    font-size: 4rem;
+                    margin-top: .1rem;
+                    letter-spacing: -0.08em;
+                    margin-right: .3rem;
+                    text-transform: uppercase;
+                    color: #F3163E;
+                    text-shadow: -.125rem .125rem .313rem #f3163e4f;
+                }
+            }
+            .Time {
+                position: absolute;
+                width: 9rem;
+                height: 1rem;
+                left: 4.7rem;
+                top: 2.4rem;
+                > p {
+                    text-align: center;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: .875rem;
+                    line-height: 0;
+                    color: #FFFFFF;
+                }
+            }
+            .ID {
+                position: absolute;
+                width: 3rem;
+                height: 1rem;
+                left: 5.65rem;
+                top: 1.5rem;
+                > p {
+                    text-align: left;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1.063rem;
+                    margin-top: -.1rem;
+                    color: #F3163E;
+                    text-shadow: 0 0 .188rem rgba(0, 0, 0, 0.52);
+                    > span {
+                        font-size: .813rem;
+                        color: #E7E7E7;
+                    }
+                }
+            }
+            .Players {
+                position: absolute;
+                width: 3rem;
+                height: 1rem;
+                left: 9.45rem;
+                top: 1.5rem;
+                > p {
+                    text-align: left;
+                    font-family: 'Montserrat';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: .813rem;
+                    text-indent: 1.3rem;
+                    margin-top: 0;
+                    color: #FFFFFF;
+                    text-shadow: 0 0 .188rem rgba(0, 0, 0, 0.52);
+                }
+            }
+        }
+        .Money {
+            position: absolute;
+            width: 15.159rem;
+            height: 2.491rem;
+            right: 0;
+            top: 8.25rem;
+            background: linear-gradient(269.86deg, #ffffff80 21.46%, #ffffff00 93.27%);
+            > p {
+                text-align: right;
+                font-family: 'Montserrat';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 1.063rem;
+                margin-right: 3.45rem;
+                line-height: .5rem;
+                color: #FFFFFF;
+                text-shadow: 0 0 .188rem #00000085;
+            }
+            .MoneySVG {
+                position: absolute;
+                right: 1.4rem;
+                top: .55rem;
+            }
+        }
+    }
+}
+
+.UZStore {
+    .Speedometer {
+        position: absolute;
+        width: 22rem;
+        height: 17.5rem;
+        right: 3.8rem;
+        bottom: 2rem;
+        transition: opacity .27s linear;
+        // background-color: rgba(51, 153, 76, 0.274);
+        .SpeedText {
+            position: absolute;
+            width: 78.45px;
+            height: 2rem;
+            margin: auto auto;
+            left: 0;
+            right: 0;
+            top: 7.75rem;
+            z-index: 2;
+            > p {
+                text-align: center;
+                font-family: 'M PLUS 1';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 1.875rem;
+                margin-top: -.5rem;
+                text-align: center;
+                color: #FFFFFF;
+            }
+        }
+        .Gear {
+            position: absolute;
+            width: 1rem;
+            height: 1.5rem;
+            margin: auto auto;
+            left: 0;
+            right: 0;
+            top: 10.8rem;
+            > p {
+                text-align: center;
+                font-family: 'M PLUS 1';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 1.25rem;
+                margin-top: 0;
+                color: #FFFFFF;
+            }
+        }
+        .SpeedType {
+            position: absolute;
+            width: 2rem;
+            height: .8rem;
+            margin: auto auto;
+            left: 0;
+            right: 0;
+            top: 9.7rem;
+            > p {
+                font-family: 'M PLUS 1';
+                font-style: normal;
+                font-weight: 700;
+                font-size: .5rem;
+                margin-top: 0;
+                text-align: center;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+        .BackSVG {
+            position: absolute;
+            left: .7rem;
+            top: -1.3rem;
+            z-index: -1;
+        }
+        .SpeedBack2 {
+            position: absolute;
+            left: 4.7rem;
+            top: 2.8rem;
+        }
+        .SpeedRoad {
+            position: absolute;
+            transform: rotate(0deg);
+            width: .313rem;
+            height: .313rem;
+            margin: auto auto;
+            left: 0;
+            right: 0;
+            top: 8.6rem;
+            z-index: 1;
+        }
+        .RPMSVG {
+            position: absolute;
+            top: 1.25rem;
+            left: 3.2rem;
+            stroke-dasharray: 650;
+            stroke-dashoffset: 635;
+        }
+    }
+}
+
+@keyframes Flash {
+    0% {
+      opacity: 100%; /* Başlangıç durumu */
+    }
+    50% {
+      opacity: 0%; /* Bitiş durumu */
+    }
+    100% {
+      opacity: 100%; /* Bitiş durumu */
+    }
+}
+
+@keyframes Rpm {
+    0% {
+        stroke-dashoffset: 635;
+    }
+    50% {
+        stroke-dashoffset: 625;
+    }
+    100% {
+        stroke-dashoffset: 635;
+    }
+}
+
+
+@media screen and (width: 1920px) and (height: 1080px) {
+    html { font-size: 16px; }
+}
+
+@media screen and (width: 2560px) and (height: 1440px) {
+    html { font-size: 21.35px; }
+}
+
+@media screen and (width: 3840px) and (height: 2160px) {
+    html { font-size: 32px; }
+}
+
+@media screen and (width: 7680px) and (height: 4320px) {
+    html { font-size: 64px; }
+}
+
+@media screen and (width: 1280px) and (height: 720px) {
+    html { font-size: 10.7px; }
+}
+
+@media screen and (width: 854px) and (height: 480px) {
+    html { font-size: 7.15px; }
+}
+
+@media screen and (width: 640px) and (height: 360px) {
+    html { font-size: 5.35px; }
+}
