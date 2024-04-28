@@ -97,6 +97,8 @@ const Provider = () => {
             setMoneyType(data.MoneyType)
             setStreetDisplay(data.StreetDisplay)
 
+            setUIColor(data.UIColor)
+
             setVisible(data.setVisible)
           } else if (action === 'setMoney') {
             setMoney(data)

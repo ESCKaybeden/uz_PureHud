@@ -20,7 +20,6 @@ server_script "server.lua"
 files {
   "resources/build/index.html",
   "resources/build/**/*",
-  "resources/sounds/*.ogg",
 }
 
 escrow_ignore { "Customize.lua" }

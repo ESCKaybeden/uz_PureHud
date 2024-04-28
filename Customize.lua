@@ -12,6 +12,21 @@ Customize = {
         return GetVehicleFuelLevel(Veh) -- exports["LegacyFuel"]:GetFuel(Veh) - GetVehicleFuelLevel(Veh) - exports["uz_fuel"]:GetFuel(Veh)
     end,
 
+    UIColor = {
+        Health = '#F3163E',
+        Armour = '#00A3FF',
+        Hunger = '#ADFE00',
+        Thirst = '#00FFF0',
+        Stamina = '#FFA048',
+        Stress = '#FF0099',
+        Location = '#FFFFFF',
+        MoneyBackground = '#FFFFFF',
+        ServersBackground = '#FFFFFF',
+        ServerDetails = '#F3163E',
+        MoneyIcon = '#F3163E',
+    },
+
+
     Stress = true, -- true | false
     StressChance = 0.1, -- Default: 10% -- Percentage Stress Chance When Shooting (0-1)
     MinimumStress = 50, -- Minimum Stress Level For Screen Shaking

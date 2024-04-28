@@ -37,14 +37,18 @@ end)
 RegisterNetEvent('esx:playerLoaded')
 AddEventHandler('esx:playerLoaded', function(src)
     Wait(700)
-    TriggerClientEvent('PlayerLoaded', src)
+    local ID = Framework.GetPlayerFromId(src)?.identifier
+    if not PlayerStress[ID] then PlayerStress[ID] = 0 end
+    TriggerClientEvent('PlayerLoaded', src, tonumber(PlayerStress[ID]))
 end)
 
 RegisterNetEvent('QBCore:Server:OnPlayerLoaded')
 AddEventHandler('QBCore:Server:OnPlayerLoaded', function()
     local source = source
     Wait(700)
-    TriggerClientEvent('PlayerLoaded', source)
+    local ID = Framework.Functions.GetPlayer(source)?.PlayerData?.citizenid
+    if not PlayerStress[ID] then PlayerStress[ID] = 0 end
+    TriggerClientEvent('PlayerLoaded', source, tonumber(PlayerStress[ID]))
 end)
 
 

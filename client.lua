@@ -27,6 +27,7 @@ function FirstSetUp()
         SpeedType = Customize.SpeedometerTypeKMH and 'km/h' or 'mp/h',
         MoneyType = Customize.MoneyType,
         StreetDisplay = Customize.StreetDisplay,
+        UIColor = Customize.UIColor,
         setVisible = true
     })
     if (Customize.Framework == "ESX" or Customize.Framework == "NewESX") then
@@ -187,7 +188,7 @@ end)
 local LastSpeed, LastRpm, LastEngine, LastLight, LastSeatbelt
 local LastFuel = 0
 Citizen.CreateThread(function()
-    DisplayRadar(true)
+    DisplayRadar(false)
     local wait
     while true do
         if Optimize() then
@@ -222,7 +223,8 @@ Citizen.CreateThread(function()
                 end
             else
                 SendReactMessage('setSpedometer', false)
-                if not Customize.AlwaysOnMinimap then DisplayRadar(false) end
+                DisplayRadar((Customize.AlwaysOnMinimap) and true or false)
+                -- if not Customize.AlwaysOnMinimap then DisplayRadar((not Customize.AlwaysOnMinimap) and false or true) end
                 wait = 2750
             end
          else
