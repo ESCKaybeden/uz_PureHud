@@ -12,6 +12,11 @@ Customize = {
         return GetVehicleFuelLevel(Veh) -- exports["LegacyFuel"]:GetFuel(Veh) - GetVehicleFuelLevel(Veh) - exports["uz_fuel"]:GetFuel(Veh)
     end,
 
+    Display = {
+        PlayerDisplay = true,
+        MoneyDisplay = true
+    },
+
     UIColor = {
         Health = '#F3163E',
         Armour = '#00A3FF',

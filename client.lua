@@ -12,7 +12,7 @@ Citizen.CreateThread(function()
 end)
 
 RegisterNetEvent('PlayerLoaded', function(set)
-    stress = set
+    stress = Customize.Stress and set or 0
     FirstSetUp()
     LoadRectMinimap()
 end)
@@ -28,6 +28,8 @@ function FirstSetUp()
         MoneyType = Customize.MoneyType,
         StreetDisplay = Customize.StreetDisplay,
         UIColor = Customize.UIColor,
+        Display = Customize.Display,
+        StressDisplay = Customize.Stress,
         setVisible = true
     })
     if (Customize.Framework == "ESX" or Customize.Framework == "NewESX") then
